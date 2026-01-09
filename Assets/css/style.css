@@ -7,6 +7,23 @@
   --green: #1a8917;
 }
 /* classi per pagina */
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.sectionTitle {
+  font-weight: 700;
+}
 .paddingPage {
   padding-inline: 15%;
 }
@@ -26,7 +43,6 @@
 /* HEADER */
 header {
   background-color: var(--bgHeader);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -85,4 +101,58 @@ h1 {
 .hero div button {
   margin-bottom: 4rem;
 }
+
 /* MAIN */
+.trends {
+  margin: 3rem 0;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* trending card */
+.tendsArticles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trendCard {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.cardNum {
+  font-size: 2rem;
+  font-weight: 900;
+  color: lightgray;
+}
+
+.cardBio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.cardAuthor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.cardAuthor img {
+  border-radius: 50%;
+  width: 10%;
+}
+
+.cardDate p {
+  font-weight: 400;
+  color: gray;
+}
