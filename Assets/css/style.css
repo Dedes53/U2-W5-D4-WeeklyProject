@@ -16,6 +16,11 @@
 .fontBlack {
   color: var(--font);
 }
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
 /* HEADER */
 header {
@@ -29,6 +34,7 @@ nav {
   font-size: 1.2rem;
   padding: 1rem 0;
 }
+
 nav ul {
   display: flex;
   align-items: center;
@@ -45,9 +51,37 @@ nav ul li a {
   background-color: black;
   padding: 1rem;
   border-radius: 50px;
+  color: white;
+  border: 0;
 }
 
 .blackBg a {
   color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.paddingLeft {
+  padding-left: 15%;
+}
+
+h1 {
+  font-family: "Spectral", "Times New Roman", Times, serif;
+  font-size: 7rem;
+}
+
+.hero button {
+  padding: 0.5rem 4rem;
+  font-size: 1.5rem;
+}
+.hero div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 /* MAIN */
