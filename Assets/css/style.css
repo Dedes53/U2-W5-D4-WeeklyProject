@@ -1,0 +1,11 @@
+.paddingPage {
+  padding-inline: 15%;
+}
+.marginBottom {
+  border-bottom: 2px solid black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
