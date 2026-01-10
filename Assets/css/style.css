@@ -35,10 +35,13 @@ strong {
   color: var(--font);
 }
 .sticky {
-  background-color: var(--bgHeader);
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.bgYellow{
+   background-color: var(--bgHeader);
 }
 
 /* HEADER */
@@ -282,6 +285,10 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  position: sticky;
+  top: 100px;
+  z-index: 100;
+
 }
 
 aside h4 {
