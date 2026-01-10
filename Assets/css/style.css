@@ -204,6 +204,7 @@ svg {
   flex-direction: column;
   gap: 3rem;
   width: 60%;
+  margin-bottom: 2rem;
 }
 
 .articleCard {
