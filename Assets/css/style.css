@@ -201,6 +201,8 @@ svg {
 
 .articles /* coontenitore degli articoli */ {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
   width: 60%;
 }
 
@@ -221,6 +223,7 @@ svg {
 .articleCardAuthor {
   display: flex;
   align-items: center;
+  gap:.5rem;
 }
 .articleCardAuthor img {
   border-radius: 50%;
@@ -294,16 +297,4 @@ aside h4 {
   font-size: 1.5rem;
   padding: 0.8rem 1.2rem;
   border: 1px solid black;
-}
-
-/* === artCard === */
-
-.artCard {
-  border: 1px solid black;
-}
-
-.artCardBio {
-}
-
-.artCardImg {
 }
