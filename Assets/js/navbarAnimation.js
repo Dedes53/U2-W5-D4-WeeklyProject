@@ -6,6 +6,10 @@ const hero = document.getElementById("hero");
 const navBtn= document.getElementById("getStarted");
 
 
+/*
+Altro metodo trovato facendo ricerche. Non sapendo se vada bene o meno ai fini del compito lo lscio commentato.
+Su internet viene dato come più moderno e poerformante
+
 
 // IntersectionObserver serve a capire quando un elemento entra o esce dalla schermata
 const observer = new IntersectionObserver(
@@ -31,4 +35,26 @@ const observer = new IntersectionObserver(
 );
 
 // diciamo all'observer quale elemento osservare
-observer.observe(hero);
+observer.observe(hero); */
+
+
+// evento scroll della finestra
+window.addEventListener("scroll", () => {
+
+  // distanza della hero dall'inizio del documento
+  const heroBottom = hero.offsetTop + hero.offsetHeight;
+
+  // posizione attuale dello scroll
+  const scrollPosition = window.scrollY;
+
+  // se abbiamo superato la fine della hero
+  if (scrollPosition >= heroBottom) {
+    // navbar diventa bianca
+    navbar.classList.add("scrolled");
+    navBtn.classList.add("scrolled");
+  } else {
+    // navbar torna allo stato iniziale
+    navbar.classList.remove("scrolled");
+    navBtn.classList.remove("scrolled");
+  }
+});
