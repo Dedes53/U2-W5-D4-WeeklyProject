@@ -14,3 +14,22 @@ else{
 pathArr.forEach(letter => {
   letter.classList.remove("on");
 });
+
+
+//animazione M
+function lightRandomM() {
+  // scegliamo una lettera a caso tra quelle visibili
+  const M = pathArr[Math.floor(Math.random() * pathArr.length)];
+
+  // accendiamo la lettera
+  M.classList.add("on");
+
+  // dopo un po' la spegniamo
+  setTimeout(() => {
+    M.classList.remove("on");
+  }, 300);
+}
+
+// eseguiamo l'effetto a intervalli regolari
+setInterval(lightRandomM, 150);
+
