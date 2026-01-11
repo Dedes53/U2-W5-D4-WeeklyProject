@@ -3,12 +3,12 @@ const navbar = document.getElementById("navbar");
 
 const hero = document.getElementById("hero");
 
-const navBtn= document.getElementById("getStarted");
+const navBtn = document.getElementById("getStarted");
 
 
 /*
-Altro metodo trovato facendo ricerche. Non sapendo se vada bene o meno ai fini del compito lo lscio commentato.
-Su internet viene dato come più moderno e poerformante
+// Altro metodo trovato facendo ricerche. Non sapendo se vada bene o meno ai fini del compito lo lscio commentato.
+// Su internet viene dato come più moderno e poerformante
 
 
 // IntersectionObserver serve a capire quando un elemento entra o esce dalla schermata
@@ -35,7 +35,7 @@ const observer = new IntersectionObserver(
 );
 
 // diciamo all'observer quale elemento osservare
-observer.observe(hero); 
+observer.observe(hero);
 */
 
 
@@ -50,12 +50,13 @@ window.addEventListener("scroll", () => {
 
   // se superato la fine della hero => ...
   if (scrollPosition >= heroBottom) {
-    
+
     navbar.classList.add("scrolled");
     navBtn.classList.add("scrolled");
   } else {
-    
+
     navbar.classList.remove("scrolled");
     navBtn.classList.remove("scrolled");
   }
 });
+
