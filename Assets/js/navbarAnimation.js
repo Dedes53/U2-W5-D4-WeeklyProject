@@ -35,25 +35,26 @@ const observer = new IntersectionObserver(
 );
 
 // diciamo all'observer quale elemento osservare
-observer.observe(hero); */
+observer.observe(hero); 
+*/
 
 
 // evento scroll della finestra
 window.addEventListener("scroll", () => {
 
-  // distanza della hero dall'inizio del documento
+  // distanza di hero da inizio documento
   const heroBottom = hero.offsetTop + hero.offsetHeight;
 
   // posizione attuale dello scroll
   const scrollPosition = window.scrollY;
 
-  // se abbiamo superato la fine della hero
+  // se superato la fine della hero => ...
   if (scrollPosition >= heroBottom) {
-    // navbar diventa bianca
+    
     navbar.classList.add("scrolled");
     navBtn.classList.add("scrolled");
   } else {
-    // navbar torna allo stato iniziale
+    
     navbar.classList.remove("scrolled");
     navBtn.classList.remove("scrolled");
   }
