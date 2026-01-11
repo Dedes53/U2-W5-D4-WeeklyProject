@@ -1,35 +1,35 @@
 const svgPaths = document.querySelectorAll("#svg path"); // selezione dei path dell'svg
-const pathArr = Array.from(svgPaths); // Convertiamo la NodeList in un array per comodità di utilizzo
+const pathArr = Array.from(svgPaths); // convertire la nodelist in un array per comodità di utilizzo
 
 // check per vedere se l'array l'ho preso veramente
-if (pathArr.length>0){
+if (pathArr.length > 0) {
     console.log("array preso");
 }
-else{
+else {
     console.log("ma che cazzo");
 }
 
 
-// "reset" dell'animazione prima di farla partire
+// aggiungo un "reset" dell'animazione prima di farla partire (probabilmente non serve)
 pathArr.forEach(letter => {
-  letter.classList.remove("on");
+    letter.style.opacity = "1";
 });
 
 
 //animazione M
 function lightRandomM() {
-  // scegliamo una lettera a caso tra quelle visibili
-  const M = pathArr[Math.floor(Math.random() * pathArr.length)];
+    // scegliamo una lettera a caso tra quelle visibili
 
-  // accendiamo la lettera
-  M.classList.add("on");
+    const M = pathArr[Math.floor(Math.random() * pathArr.length)];
 
-  // dopo un po' la spegniamo
-  setTimeout(() => {
-    M.classList.remove("on");
-  }, 300);
+    // spengo la lettera per poi riaccenderla dopo un determinato intervallo di tempo
+    M.style.opacity = "0"
+    setTimeout(() => {
+        M.style.opacity = "1"
+
+    }, 300);
 }
 
 // eseguiamo l'effetto a intervalli regolari
-setInterval(lightRandomM, 150);
+setInterval(lightRandomM, 50);
 
