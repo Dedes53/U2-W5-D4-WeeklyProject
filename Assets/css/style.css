@@ -323,3 +323,18 @@ text-decoration: none;
 color:var(--font2);
 font-size: 1rem;
 }
+
+
+
+/* =======ANIMAZIONE NAVBAR ========== */
+/* stato iniziale */
+#navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--bgHeader);
+}
+
+/* stato dopo hero */
+#navbar.is-white {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
