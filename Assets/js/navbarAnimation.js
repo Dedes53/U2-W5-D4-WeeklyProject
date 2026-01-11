@@ -3,28 +3,30 @@ const navbar = document.getElementById("navbar");
 
 const hero = document.getElementById("hero");
 
-const nabBtn= document.getElementById("getStarted");
+const navBtn= document.getElementById("getStarted");
 
 
-// creiamo un IntersectionObserver
-// serve a capire quando un elemento entra o esce dalla viewport
+
+// IntersectionObserver serve a capire quando un elemento entra o esce dalla schermata
 const observer = new IntersectionObserver(
   ([entry]) => {
-    // entry rappresenta lo stato della hero rispetto alla viewport
+    // entry => stato della hero rispetto alla viewport
 
-    // se la hero NON è più visibile (scroll oltre la hero)
+    // condizione per determinare se la hero è visibile o no  
     if (!entry.isIntersecting) {
-      // aggiungiamo la classe che rende la navbar bianca
-      navbar.classList.add("is-white");
+      // caso in cui la hero non sia più visibile => aggiungiamo la classe alla navbar
+      navbar.classList.add("scrolled");
+      navBtn.classList.add("scrolled");
     } else {
-      // se la hero è visibile, torniamo allo stato iniziale
-      navbar.classList.remove("is-white");
+      // quandoi la hero si vede
+      navbar.classList.remove("scrolled");
+      navBtn.classList.remove("scrolled");
     }
   },
   {
     root: null,       // null = viewport del browser
     threshold: 0,     // scatta appena l'elemento entra/esce
-    // rootMargin: "-80px 0px 0px 0px" // opzionale
+    rootMargin: "-80px 0px 0px 0px" // mi migliora la precisione del cambio classe (dovrerbbe sottrarre qualcosa in altezza )
   }
 );
 

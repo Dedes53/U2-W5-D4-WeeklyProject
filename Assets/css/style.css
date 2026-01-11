@@ -326,7 +326,7 @@ font-size: 1rem;
 
 
 
-/* =======ANIMAZIONE NAVBAR ========== */
+/* =======ANIMAZIONE NAVBAR  e BOTTONE========== */
 /* stato iniziale */
 #navbar {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -334,7 +334,12 @@ font-size: 1rem;
 }
 
 /* stato dopo hero */
-#navbar.is-white {
+#navbar.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   background-color: #fff;
+}
+
+#getStarted.scrolled{
+  background-color:var(--green);
+  color:white;
 }
